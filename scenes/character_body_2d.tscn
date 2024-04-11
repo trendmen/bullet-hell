@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://by5fipvsxdgsv"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_bwcnk"]
+[ext_resource type="Texture2D" uid="uid://bovrc6os1vs78" path="res://assets/1612872843_4-p-krasnii-kvadrat-kartinka-dlya-fona-4.png" id="2_kyfb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rr7k0"]
+size = Vector2(20.4, 20.5333)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_mask = 5
+script = ExtResource("1_bwcnk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kyfb2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.999999)
+scale = Vector2(15, 15)
+shape = SubResource("RectangleShape2D_rr7k0")

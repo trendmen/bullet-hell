@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdj3hvc11f1o2"]
+
+[ext_resource type="Script" path="res://scenes/bullet_1.gd" id="1_ktcdw"]
+[ext_resource type="Texture2D" uid="uid://bovrc6os1vs78" path="res://assets/1612872843_4-p-krasnii-kvadrat-kartinka-dlya-fona-4.png" id="2_tdnka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvnq4"]
+size = Vector2(60, 60)
+
+[node name="bullet1" type="CharacterBody2D"]
+top_level = true
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_ktcdw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_tdnka")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1.78814e-07, -0.5)
+scale = Vector2(3.2, 3.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fvnq4")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

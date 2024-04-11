@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfguml4drscnr"]
+
+[ext_resource type="Texture2D" uid="uid://drnslwr1gira5" path="res://assets/Space_Stars2.png" id="1_spxj1"]
+[ext_resource type="PackedScene" uid="uid://by5fipvsxdgsv" path="res://scenes/character_body_2d.tscn" id="2_7fv40"]
+[ext_resource type="PackedScene" uid="uid://dy66etqanxe2u" path="res://scenes/static_body_2d.tscn" id="3_b1s15"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.99998, -8.00002)
+scale = Vector2(35.2188, 36)
+texture = ExtResource("1_spxj1")
+region_filter_clip_enabled = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_7fv40")]
+position = Vector2(-8, 512)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_b1s15")]
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_b1s15")]
+position = Vector2(494, -353)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_b1s15")]
+position = Vector2(-368, -524)
+rotation = -1.56992
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("3_b1s15")]
+position = Vector2(-313, 1905)
+rotation = -1.56992
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.28)

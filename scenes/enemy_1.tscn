@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dvdnrpm77kurb"]
+
+[node name="enemy1" type="CharacterBody2D"]
