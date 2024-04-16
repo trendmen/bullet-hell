@@ -3,5 +3,3 @@ res://scenes/character_body_2d.tscn
 res://scenes/static_body_2d.tscn
 res://scenes/enemy_1.tscn
 res://scenes/bullet_1.tscn
-res://scenes/bullet_1.gd
-res://CharacterBody2D.gd
